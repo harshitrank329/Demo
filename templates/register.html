@@ -2,7 +2,7 @@
 {% block content %}
 <h2>Register</h2>
 {% if message %}<p style="color:red">{{ message }}</p>{% endif %}
-<form method="post" action="/register">
+<form method="get" action="/register">
   <label>Username <input name="username" required></label>
   <label>Password <input type="password" name="password" required></label>
   <button type="submit">Register</button>
