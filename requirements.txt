@@ -3,3 +3,4 @@ uvicorn[standard]
 passlib[bcrypt]
 jinja2
 itsdangerous
+python-multipart
