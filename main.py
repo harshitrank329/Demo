@@ -4,6 +4,7 @@ from fastapi.templating import Jinja2Templates
 from starlette.middleware.sessions import SessionMiddleware
 from passlib.hash import pbkdf2_sha256
 import sqlite3
+from fastapi.responses import JSONResponse
 import os
 
 DB_PATH = "users.db"
