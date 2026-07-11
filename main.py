@@ -101,6 +101,14 @@ def dashboard(request: Request):
         return RedirectResponse("/login")
     return templates.TemplateResponse(request, "dashboard.html", {"user": user})
 
+@app.get("/all-users")
+def all_users():
+    conn = get_db()
+    rows = conn.execute("SELECT * FROM users").fetchall()
+    conn.close()
+
+    users = [dict(row) for row in rows]
+    return JSONResponse(content=users)
 
 @app.get("/logout")
 def logout(request: Request):
